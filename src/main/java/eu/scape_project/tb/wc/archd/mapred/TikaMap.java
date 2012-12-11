@@ -1,9 +1,12 @@
-package eu.scape_project.tb.wc.archd;
+package eu.scape_project.tb.wc.archd.mapred;
 
 import dk.statsbiblioteket.scape.arcunpacker.HadoopArcRecord;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapred.Mapper;
+import org.apache.hadoop.mapred.OutputCollector;
+import org.apache.hadoop.mapred.Reporter;
 import org.apache.tika.detect.DefaultDetector;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.mime.MediaType;
@@ -19,7 +22,7 @@ import java.util.Date;
  * Time: 11:31 AM
  * To change this template use File | Settings | File Templates.
  */
-public class TikaMap extends Mapper<Text, HadoopArcRecord, Text, LongWritable> {
+public class TikaMap implements Mapper<Text, HadoopArcRecord, Text, LongWritable> {
 
     String recMimeType;
     String recType;
@@ -33,8 +36,9 @@ public class TikaMap extends Mapper<Text, HadoopArcRecord, Text, LongWritable> {
     LongWritable one = new LongWritable(1);
     DefaultDetector detector = new DefaultDetector();
 
+
     @Override
-    public void map(Text key, HadoopArcRecord value, Context context) throws IOException, InterruptedException {
+    public void map(Text key, HadoopArcRecord value, OutputCollector<Text, LongWritable> output, Reporter reporter) throws IOException {
 
         //            recMimeType = value.getMimeType();
         //            recType = value.getType();
@@ -55,9 +59,19 @@ public class TikaMap extends Mapper<Text, HadoopArcRecord, Text, LongWritable> {
         } else {
             myTIKAout = "SIZE=0";
         }
+         output.collect(new Text(myTIKAout), one);
 
-        context.write(new Text(myTIKAout), one);
 
+    }
+
+    @Override
+    public void close() throws IOException {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void configure(JobConf job) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }
 

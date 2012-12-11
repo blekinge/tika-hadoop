@@ -1,23 +1,5 @@
-/*
- *  Copyright 2012 The SCAPE Project Consortium.
- * 
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- * 
- *       http://www.apache.org/licenses/LICENSE-2.0
- * 
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- *  under the License.
- */
+package eu.scape_project.tb.wc.archd.mapreduce;
 
-package eu.scape_project.tb.wc.archd;
-
-import dk.statsbiblioteket.scape.arcunpacker.mapreduce.ArcInputFormat;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
@@ -31,18 +13,22 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
- *
- * @author onbram
+ * Created with IntelliJ IDEA.
+ * User: abr
+ * Date: 9/5/12
+ * Time: 2:36 PM
+ * To change this template use File | Settings | File Templates.
  */
-public class FileCharacterisation extends Configured implements Tool {
+public class ZipCharacterisation extends Configured implements Tool {
 
-    public static final String name="HADOOP file characterise arc files application.";
+
+    public static final String name="HADOOP tika characterise arc files application.";
 
     public static void main(String[] args) throws Exception {
         System.out.println(name);
         long startTime = System.currentTimeMillis();
 
-        Tool tool = new FileCharacterisation();
+        Tool tool = new TikaCharacterisation();
         tool.setConf(new Configuration(true));
         tool.getConf().set("mapreduce.job.user.classpath.first","true");
         tool.getConf().set("mapreduce.user.classpath.first","true");
@@ -52,8 +38,8 @@ public class FileCharacterisation extends Configured implements Tool {
         }
 
 
-        int res = ToolRunner.run(tool.getConf(),tool, args);
-        
+        int res = ToolRunner.run(tool.getConf(), tool, args);
+
         long elapsedTime = System.currentTimeMillis()-startTime;
         System.out.println("Processing time (sec): " + elapsedTime/1000F);
 
@@ -63,7 +49,7 @@ public class FileCharacterisation extends Configured implements Tool {
 
     public int run(String[] args) throws Exception {
 
-        Job job = Job.getInstance(getConf());
+        Job job = null;//Job.getInstance(getConf());
         System.out.println(getConf().get("mapreduce.job.user.classpath.first"));
 
 
@@ -74,10 +60,11 @@ public class FileCharacterisation extends Configured implements Tool {
 
 
 
+
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-        job.setJarByClass(FileCharacterisation.class);
+        job.setJarByClass(TikaCharacterisation.class);
         job.setJobName(name);
 
         //*** Set interface data types
@@ -90,7 +77,7 @@ public class FileCharacterisation extends Configured implements Tool {
 
 
         //*** Set up the mapper, combiner and reducer
-        job.setMapperClass(TikaMap.class);
+        job.setMapperClass(ZipMap.class);
         job.setCombinerClass(Reduce.class);
         job.setReducerClass(Reduce.class);
 
@@ -100,7 +87,7 @@ public class FileCharacterisation extends Configured implements Tool {
 
 
         //*** Set input / output format
-        job.setInputFormatClass(ArcInputFormat.class);
+        job.setInputFormatClass(FileInputFormat.class);
         job.setOutputFormatClass(TextOutputFormat.class);
 
 
@@ -108,5 +95,6 @@ public class FileCharacterisation extends Configured implements Tool {
         boolean success = job.waitForCompletion(true);
         return success ? 0 : 1;
     }
+
 
 }

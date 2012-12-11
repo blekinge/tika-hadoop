@@ -15,7 +15,7 @@
  *  under the License.
  */
 
-package eu.scape_project.tb.wc.archd;
+package eu.scape_project.tb.wc.archd.mapreduce;
 
 import dk.statsbiblioteket.scape.arcunpacker.mapreduce.ArcInputFormat;
 import org.apache.hadoop.conf.Configuration;
@@ -63,7 +63,7 @@ public class TikaCharacterisation extends Configured implements Tool {
 
     public int run(String[] args) throws Exception {
 
-        Job job = Job.getInstance(getConf());
+        Job job = null;//Job.getInstance(getConf());
         System.out.println(getConf().get("mapreduce.job.user.classpath.first"));
 
 

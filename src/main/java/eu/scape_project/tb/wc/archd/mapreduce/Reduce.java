@@ -1,4 +1,4 @@
-package eu.scape_project.tb.wc.archd;
+package eu.scape_project.tb.wc.archd.mapreduce;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

@@ -1,4 +1,4 @@
-package eu.scape_project.tb.wc.archd;
+package eu.scape_project.tb.wc.archd.mapreduce;
 
 import dk.statsbiblioteket.scape.arcunpacker.HadoopArcRecord;
 import org.apache.hadoop.io.LongWritable;
@@ -44,6 +44,9 @@ public class FileMap extends Mapper<Text, HadoopArcRecord, Text, LongWritable> {
         recContent = value.getContents();
         ProcessBuilder builder = new ProcessBuilder("file", "-");
         Process process = builder.start();
+
+
+        int returnCode = process.exitValue();
 
         context.write(new Text(myFileout), one);
 
