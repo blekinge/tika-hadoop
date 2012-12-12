@@ -44,8 +44,7 @@ public class TikaCharacterisation extends Configured implements Tool {
 
         Tool tool = new TikaCharacterisation();
         tool.setConf(new Configuration(true));
-        tool.getConf().set("mapreduce.job.user.classpath.first","true");
-        tool.getConf().set("mapreduce.user.classpath.first","true");
+        tool.getConf().addResource("jobConfig.xml");
 
         for (int i = 0; i < args.length; i++) {
             System.out.println("Arg" + i + ": " + args[i]);
@@ -62,17 +61,14 @@ public class TikaCharacterisation extends Configured implements Tool {
     }
 
     public int run(String[] args) throws Exception {
-
-        Job job = null;//Job.getInstance(getConf());
-        System.out.println(getConf().get("mapreduce.job.user.classpath.first"));
+        Configuration conf = getConf();
+        Job job = new Job(conf);
+        System.out.println(conf.get("mapreduce.job.user.classpath.first"));
 
 
         for (int i = 0; i < args.length; i++) {
             System.out.println("Arg" + i + ": " + args[i]);
         }
-
-
-
 
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));

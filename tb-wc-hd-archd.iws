@@ -15,10 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35b4a719-b1dd-44a1-8bc1-b4b1160e1645" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/real.arc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/jobConfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/eu/scape_project/tb/wc/archd/TikaCharacterisationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java" afterPath="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java" afterPath="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jobConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/jobConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tb-wc-hd-archd.iml" afterPath="$PROJECT_DIR$/tb-wc-hd-archd.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tb-wc-hd-archd.iws" afterPath="$PROJECT_DIR$/tb-wc-hd-archd.iws" />
     </list>
@@ -110,9 +108,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="36" column="40" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,7 +125,7 @@
       <file leaf-file-name="jobConfig.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/jobConfig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="63" selection-start="258" selection-end="258" vertical-scroll-proportion="0.33919597">
+            <state line="19" column="19" selection-start="524" selection-end="524" vertical-scroll-proportion="0.7160804">
               <folding />
             </state>
           </provider>
@@ -138,7 +134,18 @@
       <file leaf-file-name="TikaCharacterisation.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="13" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
+            <state line="78" column="39" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Job.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.0.1/hadoop-core-2.0.0-mr1-cdh4.0.1.jar!/org/apache/hadoop/mapreduce/Job.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="11" selection-start="537" selection-end="537" vertical-scroll-proportion="-5.68">
               <folding />
             </state>
           </provider>
@@ -202,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/TikaMapOld.java" />
         <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/ReduceOld.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/TikaCharacterisation.java" />
@@ -217,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/ZipMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/jobConfig.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/jobConfig.xml" />
       </list>
     </option>
@@ -308,6 +315,19 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -421,6 +441,10 @@
               <option name="myItemId" value="archd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapreduce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -476,19 +500,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Favorites" />
     </panes>
   </component>
@@ -496,14 +507,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="124" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="134" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="124" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="124" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="139" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1048" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1048" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1048" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="139" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="134" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -520,8 +531,8 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -827,12 +838,16 @@
       <created>1355234498867</created>
       <updated>1355234498867</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Config that actually works. Added a test">
+      <created>1355322075624</created>
+      <updated>1355322075624</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -848,7 +863,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36474577" sideWeight="0.67172414" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3701695" sideWeight="0.67172414" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27525425" sideWeight="0.67172414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -900,7 +915,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version supporting both madred and yarn. Attempt at file char and Zip char" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config that actually works. Added a test" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -914,6 +929,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Version supporting both madred and yarn. Attempt at file char and Zip char" />
+    <MESSAGE value="Config that actually works. Added a test" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -957,11 +973,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.0/tika-core-1.0-sources.jar!/org/apache/tika/metadata/Metadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="11" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-common/2.0.0-cdh4.0.1/hadoop-common-2.0.0-cdh4.0.1-sources.jar!/org/apache/hadoop/conf/Configured.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="23" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0" />
@@ -992,9 +1003,14 @@
         <state line="82" column="35" selection-start="2942" selection-end="2942" vertical-scroll-proportion="0.03348214" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="13" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0" />
+        <state line="36" column="40" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assembly/hadoop-job.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="14" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaMap.java">
@@ -1022,16 +1038,16 @@
         <state line="15" column="13" selection-start="407" selection-end="407" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assembly/hadoop-job.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/2.0.0-mr1-cdh4.0.1/hadoop-core-2.0.0-mr1-cdh4.0.1.jar!/org/apache/hadoop/mapreduce/Job.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+        <state line="12" column="11" selection-start="537" selection-end="537" vertical-scroll-proportion="-5.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapred/TikaCharacterisation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/eu/scape_project/tb/wc/archd/mapreduce/TikaCharacterisation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="40" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0">
+        <state line="78" column="39" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1040,7 +1056,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/jobConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="63" selection-start="258" selection-end="258" vertical-scroll-proportion="0.33919597">
+        <state line="19" column="19" selection-start="524" selection-end="524" vertical-scroll-proportion="0.7160804">
           <folding />
         </state>
       </provider>
