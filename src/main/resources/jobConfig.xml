@@ -1,0 +1,34 @@
+<configuration>
+    <property>
+        <name>mapred.reduce.tasks</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>mapred.child.java.opts</name>
+        <value>-Xms256m -Xmx2g -XX:+UseSerialGC</value>
+    </property>
+    <property>
+        <name>mapreduce.job.user.classpath.first</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>mapreduce.user.classpath.first</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>mapred.job.max.map.memory.mb</name>
+        <value>4096</value>
+    </property>
+    <property>
+        <name>mapred.job.max.reduce.memory.mb</name>
+        <value>4096</value>
+    </property>
+    <property>
+        <name>mapred.job.map.memory.mb</name>
+        <value>2048</value>
+    </property>
+    <property>
+        <name>mapred.job.reduce.memory.mb</name>
+        <value>2048</value>
+    </property>
+</configuration>

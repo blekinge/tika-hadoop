@@ -34,10 +34,7 @@ public class TikaCharacterisation extends Configured implements Tool{
 
 
         Configuration config = new Configuration(true);
-        config.set("mapreduce.job.user.classpath.first", "true");
-
-       config.set("mapreduce.user.classpath.first", "true");
-
+        config.addResource("jobConfig.xml");
 
         JobConf job = new JobConf(config);
 
